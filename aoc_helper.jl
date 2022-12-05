@@ -25,3 +25,12 @@ function readInput(day::Integer)
     return readInput(path)
 end
 export readInput
+
+function readTest()
+    path = joinpath(@__DIR__, "data", "test.txt")
+    s = open(path, "r") do file
+        read(file, String)
+    end
+    return s
+end
+export readTest
